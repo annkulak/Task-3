@@ -1,0 +1,214 @@
+@import url("reset.css");
+
+html {
+    display: block;
+    margin: 0 auto;
+    max-width: 1240px;
+    min-width: 320px;
+}
+
+:root {
+    --text-color-dark: #05322c;
+    --text-color-light: white;
+    --gradient-color-first: #04bedc;
+    --gradient-color-second: #04f875;
+    --background-button-color: #c1f4ee;
+    --background-shadow-color: rgba(0, 0, 0, 0.5);
+    --button-color: rgba(0, 0, 0, .6);
+    --button-shadow-color: rgba(255, 255, 255, .7);
+    font-family: Arial;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    color: var(--text-color-dark);
+}
+
+section,
+div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    height: max-content;
+}
+
+.home-work-number {
+    align-items: center;
+    font-size: 30px;
+    font-weight: 900;
+    text-transform: uppercase;
+    padding: 3% 2% 5% 2%;
+}
+
+.container {
+    flex-direction: column;
+    background: linear-gradient(90deg, rgb(4, 190, 220) 11%, rgb(4, 234, 144) 81%, rgb(4, 248, 117));
+    box-shadow: 0px 5px 10px 0px var(--background-shadow-color);
+    padding: 100px 20px;
+    max-width: 1240px;
+    max-height: 1000px;
+}
+
+.result-container {
+    flex-direction: column;
+    font-family: 'Arial';
+    text-decoration: none;
+    font-weight: 400;
+    justify-content: space-between;
+    align-items: flex-end;
+    color: var(--text-color-light);
+    background-color: var(--text-color-dark);
+    border-radius: 2px;
+    padding: 1%;
+    width: 40vw;
+    max-width: 406px;
+    height: 10vw;
+    max-height: 120px;
+}
+
+.result-container div {
+    align-items: flex-end;
+}
+
+.result-operator-block {
+    font-size: 80%;
+    overflow: hidden;
+    width: 100%;
+    height: 40%;
+}
+
+.result-value-block {
+    font-size: 180%;
+    overflow: hidden;
+    width: 100%;
+    height: 60%;
+}
+
+.buttons-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-gap: 2px;
+    background: var(--text-color-light);
+    width: 40vw;
+    max-width: 406px;
+    height: 49.72vw;
+    max-height: 510px;
+}
+
+.buttons-container>button:first-child {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.buttons-container>button:last-child {
+    grid-column-start: -3;
+    grid-column-end: -1;
+}
+
+.box {
+    width: 98.5%;
+    height: 98%;
+    font-size: 180%;
+}
+
+.box:last-child {
+    background: var(--text-color-light);
+    border: var(--text-color-light);
+
+}
+
+button {
+    font-family: 'Arial';
+    font-size: 180%;
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    color: var(--button-color);
+    text-shadow: 0 1px 1px var(--button-shadow-color);
+    border: 1px solid var(--background-button-color);
+    border-radius: 4px;
+    background: var(--background-button-color);
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .1));
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, .2), 0 1px 2px rgba(0, 0, 0, .2), inset 0 1px 2px rgba(255, 255, 255, .7);
+    padding: 3px;
+
+}
+
+button:hover,
+button.hover {
+    background: #fff;
+}
+
+button:active,
+button.active {
+    background: #d0d3d6;
+    background-image: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, 0));
+    box-shadow: inset 0 0 2px rgba(0, 0, 0, .2), inset 0 2px 5px rgba(0, 0, 0, .2), 0 1px rgba(255, 255, 255, .2);
+}
+
+@media screen and (max-width: 960px) {
+
+    .result-container {
+        width: 60vw;
+        height: 15vw;
+    }
+
+    .buttons-container {
+        width: 60vw;
+        height: 74.58vw;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .result-container {
+        width: 80vw;
+        height: 20vw;
+    }
+
+    .buttons-container {
+        width: 80vw;
+        height: 99.44vw;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .result-container {
+        width: 90vw;
+        height: 22.5vw;
+    }
+
+    .buttons-container {
+        width: 90vw;
+        height: 111.87vw;
+    }
+
+    .result-operator-block {
+        font-size: 80%;
+    }
+
+    .result-value-block {
+        font-size: 160%;
+    }
+
+    button {
+        font-size: 160%;
+    }
+}
+
+@media screen and (max-width: 360px) {
+
+    .result-operator-block {
+        font-size: 70%;
+    }
+
+    .result-value-block {
+        font-size: 140%;
+    }
+
+    button {
+        font-size: 140%;
+    }
+}
